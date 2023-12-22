@@ -11,7 +11,25 @@
 		717C36A52B351D8700175F88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36A42B351D8700175F88 /* ContentView.swift */; };
 		717C36A72B351D8700175F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717C36A62B351D8700175F88 /* Assets.xcassets */; };
 		717C36AA2B351D8700175F88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717C36A92B351D8700175F88 /* Preview Assets.xcassets */; };
+		717C36B32B35296300175F88 /* LogoDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36B22B35296300175F88 /* LogoDataService.swift */; };
+		717C36B72B3529F600175F88 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36B62B3529F600175F88 /* Response.swift */; };
+		717C36B92B35309400175F88 /* ImageAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36B82B35309400175F88 /* ImageAPIError.swift */; };
+		717C36BB2B35318D00175F88 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C36BA2B35318D00175F88 /* HTTPDataDownloader.swift */; };
+		719A597C2B35365100E0524F /* LogoBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A597B2B35365100E0524F /* LogoBuddyTests.swift */; };
+		719A59832B35386100E0524F /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A59822B35386100E0524F /* MockDataService.swift */; };
+		719A59852B3538CC00E0524F /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A59842B3538CC00E0524F /* TestData.swift */; };
+		719A59862B3539D300E0524F /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A59842B3538CC00E0524F /* TestData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		719A597D2B35365100E0524F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 717C36972B351D8700175F88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 717C369E2B351D8700175F88;
+			remoteInfo = LogoBuddy;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		717C369F2B351D8700175F88 /* LogoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +37,27 @@
 		717C36A42B351D8700175F88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		717C36A62B351D8700175F88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		717C36A92B351D8700175F88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		717C36B02B351D9800175F88 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		717C36B12B351EFD00175F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		717C36B22B35296300175F88 /* LogoDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoDataService.swift; sourceTree = "<group>"; };
+		717C36B62B3529F600175F88 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		717C36B82B35309400175F88 /* ImageAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIError.swift; sourceTree = "<group>"; };
+		717C36BA2B35318D00175F88 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
+		719A59792B35365100E0524F /* LogoBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogoBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		719A597B2B35365100E0524F /* LogoBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoBuddyTests.swift; sourceTree = "<group>"; };
+		719A59822B35386100E0524F /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		719A59842B3538CC00E0524F /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		717C369C2B351D8700175F88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		719A59762B35365100E0524F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				717C36A12B351D8700175F88 /* LogoBuddy */,
+				719A597A2B35365100E0524F /* LogoBuddyTests */,
 				717C36A02B351D8700175F88 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				717C369F2B351D8700175F88 /* LogoBuddy.app */,
+				719A59792B35365100E0524F /* LogoBuddyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +88,11 @@
 		717C36A12B351D8700175F88 /* LogoBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				717C36BC2B3531B300175F88 /* API */,
+				717C36B02B351D9800175F88 /* Config.xcconfig */,
+				717C36B12B351EFD00175F88 /* Info.plist */,
+				717C36B52B3529DF00175F88 /* Service */,
+				717C36B42B3529D200175F88 /* Model */,
 				717C36A22B351D8700175F88 /* LogoBuddyApp.swift */,
 				717C36A42B351D8700175F88 /* ContentView.swift */,
 				717C36A62B351D8700175F88 /* Assets.xcassets */,
@@ -65,6 +107,41 @@
 				717C36A92B351D8700175F88 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		717C36B42B3529D200175F88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				717C36B62B3529F600175F88 /* Response.swift */,
+				717C36B82B35309400175F88 /* ImageAPIError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		717C36B52B3529DF00175F88 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				717C36B22B35296300175F88 /* LogoDataService.swift */,
+				719A59822B35386100E0524F /* MockDataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		717C36BC2B3531B300175F88 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				717C36BA2B35318D00175F88 /* HTTPDataDownloader.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		719A597A2B35365100E0524F /* LogoBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				719A597B2B35365100E0524F /* LogoBuddyTests.swift */,
+				719A59842B3538CC00E0524F /* TestData.swift */,
+			);
+			path = LogoBuddyTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +164,24 @@
 			productReference = 717C369F2B351D8700175F88 /* LogoBuddy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		719A59782B35365100E0524F /* LogoBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 719A59812B35365100E0524F /* Build configuration list for PBXNativeTarget "LogoBuddyTests" */;
+			buildPhases = (
+				719A59752B35365100E0524F /* Sources */,
+				719A59762B35365100E0524F /* Frameworks */,
+				719A59772B35365100E0524F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				719A597E2B35365100E0524F /* PBXTargetDependency */,
+			);
+			name = LogoBuddyTests;
+			productName = LogoBuddyTests;
+			productReference = 719A59792B35365100E0524F /* LogoBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +194,10 @@
 				TargetAttributes = {
 					717C369E2B351D8700175F88 = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					719A59782B35365100E0524F = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 717C369E2B351D8700175F88;
 					};
 				};
 			};
@@ -116,6 +215,7 @@
 			projectRoot = "";
 			targets = (
 				717C369E2B351D8700175F88 /* LogoBuddy */,
+				719A59782B35365100E0524F /* LogoBuddyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +230,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		719A59772B35365100E0524F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,16 +244,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717C36B72B3529F600175F88 /* Response.swift in Sources */,
+				717C36B32B35296300175F88 /* LogoDataService.swift in Sources */,
+				717C36B92B35309400175F88 /* ImageAPIError.swift in Sources */,
+				719A59862B3539D300E0524F /* TestData.swift in Sources */,
 				717C36A52B351D8700175F88 /* ContentView.swift in Sources */,
+				717C36BB2B35318D00175F88 /* HTTPDataDownloader.swift in Sources */,
+				719A59832B35386100E0524F /* MockDataService.swift in Sources */,
 				717C36A32B351D8700175F88 /* LogoBuddyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		719A59752B35365100E0524F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				719A597C2B35365100E0524F /* LogoBuddyTests.swift in Sources */,
+				719A59852B3538CC00E0524F /* TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		719A597E2B35365100E0524F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 717C369E2B351D8700175F88 /* LogoBuddy */;
+			targetProxy = 719A597D2B35365100E0524F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		717C36AB2B351D8700175F88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 717C36B02B351D9800175F88 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -210,6 +341,7 @@
 		};
 		717C36AC2B351D8700175F88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 717C36B02B351D9800175F88 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -275,6 +407,7 @@
 				DEVELOPMENT_TEAM = 7VM5MRXF6F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LogoBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +437,7 @@
 				DEVELOPMENT_TEAM = 7VM5MRXF6F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LogoBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +453,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		719A597F2B35365100E0524F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VM5MRXF6F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.danilelelewis.LogoBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogoBuddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LogoBuddy";
+			};
+			name = Debug;
+		};
+		719A59802B35365100E0524F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VM5MRXF6F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.danilelelewis.LogoBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogoBuddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LogoBuddy";
 			};
 			name = Release;
 		};
@@ -339,6 +509,15 @@
 			buildConfigurations = (
 				717C36AE2B351D8700175F88 /* Debug */,
 				717C36AF2B351D8700175F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		719A59812B35365100E0524F /* Build configuration list for PBXNativeTarget "LogoBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				719A597F2B35365100E0524F /* Debug */,
+				719A59802B35365100E0524F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
