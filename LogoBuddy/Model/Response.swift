@@ -8,10 +8,6 @@
 import Foundation
 
 struct Response: Codable {
-    let id = UUID().uuidString
-    let imageUrl: String
-    
-    enum CodingKeys: String, CodingKey {
-        case imageUrl = "url"
-    }
+    let created: Int
+    let data: [CreatedImage]
 }

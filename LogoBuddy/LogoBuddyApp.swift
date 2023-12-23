@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct LogoBuddyApp: App {
+    @State var vm = ImageViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ImagesView()
+                .environment(vm)
+                .onAppear {
+                    print(Bundle.main.infoDictionary?["API_KEY"] as? String)
+                }
         }
     }
 }

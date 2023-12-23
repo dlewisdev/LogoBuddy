@@ -13,41 +13,47 @@ protocol LogoServiceProtocol {
 
 struct LogoDataService: LogoServiceProtocol, HTTPDataDownloader {
     
-    private let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String
-    
-    private let prompt: String
-    
-    private var baseURLComponents: URLComponents {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "api.openai.com"
-        components.path = "v1/images/"
-        
-        return components
-    }
-    
-    private func imageGenerationURL(prompt: String) -> String? {
-        var components = baseURLComponents
-        components.path += "generations"
-        components.queryItems = [
-            .init(name: "prompt", value: prompt),
-            .init(name: "model", value: "dall-e-3"),
-            .init(name: "n", value: "1"),
-            .init(name: "response_format", value: "url"),
-            .init(name: "size", value: "1024x1024")
-            
-        ]
-        
-        return components.url?.absoluteString
-    }
+    let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String
     
     func fetchLogo(prompt: String) async throws -> Response {
-        guard let endpoint = imageGenerationURL(prompt: prompt) else {
-            throw ImageAPIError.requestFailed(description: "Invalid endpoint")
+        
+        // Check if API Key exists
+        guard apiKey != nil else {
+            return Response(created: 0, data: [CreatedImage]())
         }
         
-        let image = try await fetchData(as: Response.self, endpoint: endpoint)
+        // Define endpoint
+        if let url = URL(string: "https://api.openai.com/v1/images/generations") {
+            print(url)
+            
+            // 2. Create request
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("\(apiKey!)", forHTTPHeaderField: "Authorization")
+            
+            let parameters: [String:Any] = [
+                "model":"dall-e-3",
+                "prompt":prompt,
+                "size":"1024x1024"
+            ]
+            let requestBody = try? JSONSerialization.data(withJSONObject: parameters)
+            
+            request.httpBody = requestBody
+            
+            // 3. Send request
+            do {
+                let (data, _) = try await URLSession.shared.data(for: request)
+                
+                let decoder = JSONDecoder()
+                let promptResult = try decoder.decode(Response.self, from: data)
+                return promptResult
+                
+            } catch {
+                print(error)
+            }
+        }
         
-        return image
+        return Response(created: 0, data: [CreatedImage]())
     }
 }
